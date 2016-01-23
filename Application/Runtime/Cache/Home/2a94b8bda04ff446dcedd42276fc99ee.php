@@ -85,7 +85,7 @@
                 <!-- parameter-header end -->
                 <div class="row" style="margin-bottom:50px;">
                     <div class="col-md-6">
-                    <form action="/" method="post">
+                    <form action="/index.php/Home/Index/index.html" method="post">
                         <div class="form-group has-feedback form-patch">
                             <div class="col-md-3"><span>旧ID：</span></div>
                             <div class="col-md-4"><input type="text" name="oldid1" class="form-control" style="width:100%"/></div>
@@ -112,7 +112,7 @@
                     </form>
                     </div>
                     <div class="col-md-6">
-                    <form action="/" method="post">
+                    <form action="/index.php/Home/Index/index.html" method="post">
                         <div class="form-group has-feedback form-patch">
                             <div class="col-md-3"><span>ID：</span></div>
                             <div class="col-md-4"><input type="text" name="id1" class="form-control" style="width:100%"/></div>
@@ -245,7 +245,7 @@
                 <div class="row">
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
-                        <form action="/" method="post">
+                        <form action="/index.php/Home/Index/index.html" method="post">
                             <div class="form-group has-feedback form-patch">
                                 <div class="col-xs-6"><span> 新用户名：</span></div>
                                 <div class="col-xs-6"><input type="text" name="username" class="form-control" style="width:100%;"/></div>
