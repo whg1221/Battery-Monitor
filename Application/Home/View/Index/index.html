@@ -60,19 +60,22 @@
                     </thead>
                     <tbody>
                         <!-- 以下tr标签可以append -->
+                        <foreach name = 'battyHis' item = 'b'>
                         <tr>
-                            <th scope="row">测试</th>
-                            <td>测试</td>
-                            <td>测试</td>
-                            <td>测试</td>
-                            <td>测试</td>
-                            <td>测试</td>
-                            <td>测试</td>
-                            <td>测试</td>
-                            <td>测试</td>
-                            <td>测试</td>
-                            <td>测试</td>
+                            <th scope = 'row'>{$b.syspressure}</th>
+                            <td>{$b.soc}</td>
+                            <td>{$b.battery}</td>
+                            <td>{$b.range}</td>
+                            <td>{$b.tempmax}</td>
+                            <td>{$b.tempmin}</td>
+                            <td>{$b.voltagemax}</td>
+                            <td>{$b.voltagemin}</td>
+                            <td>{$b.faultevent}</td>
+                            <td>{$b.faulttime}</td>
+                            <td>{$b.recordtime}</td>
                         </tr>
+                        </foreach>
+                        
                     </tbody>
                 </table>
                 <!-- history-table end -->
@@ -85,7 +88,7 @@
                 <!-- parameter-header end -->
                 <div class="row" style="margin-bottom:50px;">
                     <div class="col-md-6">
-                    <form action="__SELF__" method="post">
+                    <form id="form0" action="" method="post">
                         <div class="form-group has-feedback form-patch">
                             <div class="col-md-3"><span>旧ID：</span></div>
                             <div class="col-md-4"><input type="text" name="oldid1" class="form-control" style="width:100%"/></div>
@@ -101,11 +104,11 @@
                         <div class="row">
                             <div class="col-xs-3"></div>
                             <div class="col-xs-2">
-                                <button type="submit" class="btn btn-customized btn-block btn-flat">保存</button>
+                                <button type="submit" class="btn btn-customized btn-block btn-flat" onClick="store();return false;">保存</button>
                             </div>
                             <div class="col-xs-2"></div>
                             <div class="col-xs-2">
-                                <button type="submit" class="btn btn-customized btn-block btn-flat">标定</button>
+                                <button type="submit" class="btn btn-customized btn-block btn-flat" onClick="standard();return false">标定</button>
                             </div>
                             <div class="col-xs-3"></div>
                         </div>
@@ -223,12 +226,14 @@
                     </thead>
                     <tbody>
                         <!-- 以下tr标签可以append -->
+                        <foreach name="battyHis" item='b'>
                         <tr>
-                            <th scope="row">测试</th>
+                            <th scope="row">{$b.faultevent}</th>
+                            <td>{$b.faulttime}</td>
                             <td>测试</td>
-                            <td>测试</td>
-                            <td>测试</td>
+                            <td>{$b.recordtime}</td>
                         </tr>
+                        </foreach>
                     </tbody>
                 </table>
                 <!-- errors-table end -->
@@ -245,7 +250,7 @@
                 <div class="row">
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
-                        <form action="__SELF__" method="post">
+                        <form action="{:U('Index/battery_detail')}" method="post">
                             <div class="form-group has-feedback form-patch">
                                 <div class="col-xs-6"><span> 新用户名：</span></div>
                                 <div class="col-xs-6"><input type="text" name="username" class="form-control" style="width:100%;"/></div>
@@ -294,6 +299,18 @@
     <script src="__PUBLIC__/adminlte/dist/js/app.min.js" type="text/javascript"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="__PUBLIC__/adminlte/dist/js/demo.js" type="text/javascript"></script>
+    <!-- Different Button -->
+    <script type="text/javascript">
+    	function store() {
+    		document.getElementById("form0").action="{:U('Index/store')}";
+    		document.form0.submit;
+    	}
+    	
+    	function standard() {
+    		document.getElementById("form0").action="{:U('Index/standard')}";
+    		document.form0.submit;
+    	}
+    </script>
 </body>
 
 </html>
