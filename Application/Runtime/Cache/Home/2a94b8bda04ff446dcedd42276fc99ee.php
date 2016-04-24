@@ -7,18 +7,18 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.4 -->
-    <link href="/Wwww/Public/adminlte/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/adminlte/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Font Awesome Icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- Ionicons -->
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
-    <link href="/Wwww/Public/adminlte/dist/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/adminlte/dist/css/AdminLTE.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins
      folder instead of downloading all of them to reduce the load. -->
-    <link href="/Wwww/Public/adminlte/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/adminlte/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
     <!--common style-->
-    <link href="/Wwww/Public/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/css/common.css" rel="stylesheet" type="text/css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,7 +26,9 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
     <!-- Customized CSS Style -->
-    <link href="/Wwww/Public/css/customized.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/css/customized.css" rel="stylesheet" type="text/css" />
+    <!-- ECharts -->
+    <script src="/Public/adminlte/dist/js/echarts.min.js" type="text/javascript"></script>
 </head>
 <!-- ADD THE CLASS sidedar-collapse TO HIDE THE SIDEBAR PRIOR TO LOADING THE SITE -->
 
@@ -38,7 +40,7 @@
             <div role="tabpanel" class="tab-pane" id="history">
                 <!-- history-header -->
                 <div class="index-header">
-                    <div class="col-md-1"><img src="/Wwww/Public/adminlte/dist/img/logo.png" alt="上海航天电源技术有限公司" class="logo-img-2"></div>
+                    <div class="col-md-1"><img src="/Public/adminlte/dist/img/logo.png" alt="上海航天电源技术有限公司" class="logo-img-2"></div>
                 </div>
                 <!-- history-header end -->
                 <!-- history-table -->
@@ -81,135 +83,202 @@
             <div role="tabpanel" class="tab-pane" id="parameter">
                 <!-- parameter-header -->
                 <div class="index-header">
-                    <div class="col-md-1"><img src="/Wwww/Public/adminlte/dist/img/logo.png" alt="上海航天电源技术有限公司" class="logo-img-2"></div>
+                    <div class="col-md-1"><img src="/Public/adminlte/dist/img/logo.png" alt="上海航天电源技术有限公司" class="logo-img-2"></div>
                 </div>
                 <!-- parameter-header end -->
-                <div class="row" style="margin-bottom:50px;">
-                    <div class="col-md-6">
-                    <form id="form0" action="" method="post">
-                        <div class="form-group has-feedback form-patch">
-                            <div class="col-md-3"><span>旧ID：</span></div>
-                            <div class="col-md-4"><input type="text" name="oldid1" class="form-control" style="width:100%"/></div>
-                            <div class="col-md-1"><span style="text-align:center;">——</span></div>
-                            <div class="col-md-4"><input type="text" name="oldid2" class="form-control" style="width:100%"/></div>
-                        </div>
-                        <div class="form-group has-feedback form-patch">
-                            <div class="col-md-3"><span> 新ID：</span></div>
-                            <div class="col-md-4"><input type="text" name="newid1" class="form-control" style="width:100%"/></div>
-                            <div class="col-md-1"><span style="text-align:center;">——</span></div>
-                            <div class="col-md-4"><input type="text" name="newid2" class="form-control" style="width:100%"/></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-3"></div>
-                            <div class="col-xs-2">
-                                <button type="submit" class="btn btn-customized btn-block btn-flat" onClick="store();return false;">保存</button>
-                            </div>
-                            <div class="col-xs-2"></div>
-                            <div class="col-xs-2">
-                                <button type="submit" class="btn btn-customized btn-block btn-flat" onClick="standard();return false">标定</button>
-                            </div>
-                            <div class="col-xs-3"></div>
-                        </div>
-                    </form>
+                <div class="row" style="margin-bottom:50px;background: #fff;">
+                    <div class="col-md-6" id="chart1" style="height:400px;width:650px;">
+                        <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('chart1'));
+
+                        // 指定图表的配置项和数据
+                        var option = {
+                            title: {
+                                text: 'Battery Temp',
+                                subtext: 'Test Data'
+                            },
+                            tooltip: {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                data:['MaxTemp','MinTemp']
+                            },
+                            toolbox: {
+                                show: true,
+                                feature: {
+                                    dataZoom: {},
+                                    dataView: {readOnly: false},
+                                    magicType: {type: ['line', 'bar']},
+                                    restore: {},
+                                    saveAsImage: {}
+                                }
+                            },
+                            xAxis:  {
+                                type: 'category',
+                                boundaryGap: false,
+                                data: ['周一','周二','周三','周四','周五','周六','周日']
+                            },
+                            yAxis: {
+                                type: 'value',
+                                axisLabel: {
+                                    formatter: '{value} °C'
+                                }
+                            },
+                            series: [
+                                {
+                                    name:'MaxTemp',
+                                    type:'line',
+                                    data:[11, 11, 15, 13, 12, 13, 10],
+                                    markPoint: {
+                                        data: [
+                                            {type: 'max', name: '最大值'},
+                                            {type: 'min', name: '最小值'}
+                                        ]
+                                    },
+                                    markLine: {
+                                        data: [
+                                            {type: 'average', name: '平均值'}
+                                        ]
+                                    }
+                                },
+                                {
+                                    name:'MinTemp',
+                                    type:'line',
+                                    data:[1, -2, 2, 5, 3, 2, 0],
+                                    markPoint: {
+                                        data: [
+                                            {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+                                        ]
+                                    },
+                                    markLine: {
+                                        data: [
+                                            {type: 'average', name: '平均值'}
+                                        ]
+                                    }
+                                }
+                            ]
+                        };
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                        </script>
                     </div>
-                    <div class="col-md-6">
-                    <form action="/Wwww/index.php/Home/Index/index.html" method="post">
-                        <div class="form-group has-feedback form-patch">
-                            <div class="col-md-3"><span>ID：</span></div>
-                            <div class="col-md-4"><input type="text" name="id1" class="form-control" style="width:100%"/></div>
-                            <div class="col-md-1"><span style="text-align:center;">——</span></div>
-                            <div class="col-md-4"><input type="text" name="id2" class="form-control" style="width:100%"/></div>
-                        </div>
-                        <div class="form-group has-feedback form-patch">
-                            <div class="col-md-3"><span> 电压路数：</span></div>
-                            <div class="col-md-4"><input type="text" name="temp" class="form-control" style="width:100%"/></div>
-                        </div>
-                        <div class="form-group has-feedback form-patch">
-                            <div class="col-md-3"><span> 温度路数：</span></div>
-                            <div class="col-md-4"><input type="text" name="voltage" class="form-control" style="width:100%"/></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-5"></div>
-                            <div class="col-xs-2">
-                                <button type="submit" class="btn btn-customized btn-block btn-flat">标定</button>
-                            </div>
-                            <div class="col-xs-5"></div>
-                        </div>
-                    </form>
+                    <div class="col-md-6" id="chart2" style="height:400px;width:650px;">
+                        <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('chart2'));
+
+                        // 指定图表的配置项和数据
+                        var option = {
+                            title: {
+                                text: 'Battery Voltage',
+                                subtext: 'Test Data'
+                            },
+                            tooltip: {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                data:['VoltageMax','VoltageMin']
+                            },
+                            toolbox: {
+                                show: true,
+                                feature: {
+                                    dataZoom: {},
+                                    dataView: {readOnly: false},
+                                    magicType: {type: ['line', 'bar']},
+                                    restore: {},
+                                    saveAsImage: {}
+                                }
+                            },
+                            xAxis:  {
+                                type: 'category',
+                                boundaryGap: false,
+                                data: ['周一','周二','周三','周四','周五','周六','周日']
+                            },
+                            yAxis: {
+                                type: 'value',
+                                axisLabel: {
+                                    formatter: '{value} V'
+                                }
+                            },
+                            series: [
+                                {
+                                    name:'VoltageMax',
+                                    type:'line',
+                                    data:[11, 11, 15, 13, 12, 13, 10],
+                                    markPoint: {
+                                        data: [
+                                            {type: 'max', name: '最大值'},
+                                            {type: 'min', name: '最小值'}
+                                        ]
+                                    },
+                                    markLine: {
+                                        data: [
+                                            {type: 'average', name: '平均值'}
+                                        ]
+                                    }
+                                },
+                                {
+                                    name:'VoltageMin',
+                                    type:'line',
+                                    data:[1, -2, 2, 5, 3, 2, 0],
+                                    markPoint: {
+                                        data: [
+                                            {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+                                        ]
+                                    },
+                                    markLine: {
+                                        data: [
+                                            {type: 'average', name: '平均值'}
+                                        ]
+                                    }
+                                }
+                            ]
+                        };
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                        </script>
                     </div>
                 </div>
             </div>
             <div role="tabpanel" class="tab-pane active" id="battery">
                 <!-- battery-header -->
                 <div class="index-header">
-                    <div class="col-md-1"><img src="/Wwww/Public/adminlte/dist/img/logo.png" alt="上海航天电源技术有限公司" class="logo-img-2"></div>
+                    <div class="col-md-1"><img src="/Public/adminlte/dist/img/logo.png" alt="上海航天电源技术有限公司" class="logo-img-2"></div>
                     <div class="col-md-11">
                         <div class="col-md-3">
-                            <div class="header-cell"><span>系统总压：</span></div>
-                            <div class="header-cell"><span>系统SOC：</span></div>
+                            <div class="header-cell"><span>系统总压：</span><span><?php echo ($b["soc"]); ?></span></div>
+                            <div class="header-cell"><span>系统SOC：</span><span><?php echo ($b["soc"]); ?></span></div>
                         </div>
                         <div class="col-md-3">
-                            <div class="header-cell">系统电流：</div>
-                            <div class="header-cell">报警等级：</div>
+                            <div class="header-cell"><span>系统电流：</span><span><?php echo ($b["soc"]); ?></span></div>
+                            <div class="header-cell"><span>报警等级：</span><span><?php echo ($b["soc"]); ?></span></div>
                         </div>
                         <div class="col-md-3">
-                            <div class="header-cell">TempMax：</div>
-                            <div class="header-cell">TempMin：</div>
+                            <div class="header-cell"><span>TempMax：</span><span><?php echo ($b["soc"]); ?></span></div>
+                            <div class="header-cell"><span>TempMin：</span><span><?php echo ($b["soc"]); ?></span></div>
                         </div>
                         <div class="col-md-3">
-                            <div class="header-cell">VoltageMax：</div>
-                            <div class="header-cell">VoltageMin：</div>
+                            <div class="header-cell"><span>VoltageMax：</span><span><?php echo ($b["soc"]); ?></span></div>
+                            <div class="header-cell"><span>VoltageMin：</span><span><?php echo ($b["soc"]); ?></span></div>
                         </div>
                     </div>
                 </div>
                 <!-- battery-header end -->
                 <!-- battery-cell -->
-                <div class="battery-cell"><p>1</p></div>
-                <div class="battery-cell"><p>2</p></div>
-                <div class="battery-cell"><p>3</p></div>
-                <div class="battery-cell"><p>4</p></div>
-                <div class="battery-cell"><p>5</p></div>
-                <div class="battery-cell"><p>6</p></div>
-                <div class="battery-cell"><p>7</p></div>
-                <div class="battery-cell"><p>8</p></div>
-                <div class="battery-cell"><p>9</p></div>
-                <div class="battery-cell"><p>10</p></div>
-                <div class="battery-cell"><p>11</p></div>
-                <div class="battery-cell"><p>12</p></div>
-                <div class="battery-cell"><p>13</p></div>
-                <div class="battery-cell"><p>14</p></div>
-                <div class="battery-cell"><p>15</p></div>
-                <div class="battery-cell"><p>16</p></div>
-                <div class="battery-cell"><p>17</p></div>
-                <div class="battery-cell"><p>18</p></div>
-                <div class="battery-cell"><p>19</p></div>
-                <div class="battery-cell"><p>20</p></div>
-                <div class="battery-cell"><p>21</p></div>
-                <div class="battery-cell"><p>22</p></div>
-                <div class="battery-cell"><p>23</p></div>
-                <div class="battery-cell"><p>24</p></div>
-                <div class="battery-cell"><p>25</p></div>
-                <div class="battery-cell"><p>26</p></div>
-                <div class="battery-cell"><p>27</p></div>
-                <div class="battery-cell"><p>28</p></div>
-                <div class="battery-cell"><p>29</p></div>
-                <div class="battery-cell"><p>30</p></div>
-                <div class="battery-cell"><p>31</p></div>
-                <div class="battery-cell"><p>32</p></div>
-                <div class="battery-cell"><p>33</p></div>
-                <div class="battery-cell"><p>34</p></div>
-                <div class="battery-cell"><p>35</p></div>
-                <div class="battery-cell"><p>36</p></div>
-                <div class="battery-cell"><p>37</p></div>
-                <div class="battery-cell"><p>38</p></div>
-                <div class="battery-cell"><p>39</p></div>
-                <div class="battery-cell"><p>40</p></div>
+                <div class="battery-cell"><a href="battery_detail.html">1</a></div>
+                <!-- append here!!! -->
+                
+                
+                
+                
+                
                 <!-- battery-cell end -->
             </div>
             <div role="tabpanel" class="tab-pane" id="errors">
                 <!-- errors-header -->
                 <div class="index-header">
-                    <div class="col-md-1"><img src="/Wwww/Public/adminlte/dist/img/logo.png" alt="上海航天电源技术有限公司" class="logo-img-2"></div>
+                    <div class="col-md-1"><img src="/Public/adminlte/dist/img/logo.png" alt="上海航天电源技术有限公司" class="logo-img-2"></div>
                 </div>
                 <!-- errors-header end -->
                 <!-- errors-table -->
@@ -237,9 +306,10 @@
             <div role="tabpanel" class="tab-pane" id="settings">
                 <!-- settings-header -->
                 <div class="index-header">
-                    <div class="col-md-1"><img src="/Wwww/Public/adminlte/dist/img/logo.png" alt="上海航天电源技术有限公司" class="logo-img-2"></div>
+                    <div class="col-md-1"><img src="/Public/adminlte/dist/img/logo.png" alt="上海航天电源技术有限公司" class="logo-img-2"></div>
                     <div class="col-md-11">
                         <p class="battery-detail-header">添加新用户</p>
+                        <button class="btn btn-customized btn-flat" style="position:absolute;top:0;right:0;"><a href="<?php echo U('Login/logout');?>">退出登录</a></button>
                     </div>
                 </div>
                 <!-- settings-header end -->
@@ -275,26 +345,25 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">历史记录</a></li>
-            <li role="presentation"><a href="#parameter" aria-controls="parameter" role="tab" data-toggle="tab">参数标定</a></li>
+            <li role="presentation"><a href="#parameter" aria-controls="parameter" role="tab" data-toggle="tab">图表查看</a></li>
             <li role="presentation" class="active"><a href="#battery" aria-controls="battery" role="tab" data-toggle="tab">电池列阵</a></li>
             <li role="presentation"><a href="#errors" aria-controls="errors" role="tab" data-toggle="tab">故障记录和分析</a></li>
             <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">设置</a></li>
-            <li><a href="<?php echo U('Login/logout');?>"><span>退出登录（仅测试功能）</span></a></li>
         </ul>
     </div>
     <!-- ./wrapper -->
     <!-- jQuery 2.1.4 -->
-    <script src="/Wwww/Public/adminlte/plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="/Public/adminlte/plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
     <!-- Bootstrap 3.3.2 JS -->
-    <script src="/Wwww/Public/adminlte/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/Public/adminlte/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <!-- SlimScroll -->
-    <script src="/Wwww/Public/adminlte/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="/Public/adminlte/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
     <!-- FastClick -->
-    <script src="/Wwww/Public/adminlte/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
+    <script src="/Public/adminlte/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
     <!-- AdminLTE App -->
-    <script src="/Wwww/Public/adminlte/dist/js/app.min.js" type="text/javascript"></script>
+    <script src="/Public/adminlte/dist/js/app.min.js" type="text/javascript"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="/Wwww/Public/adminlte/dist/js/demo.js" type="text/javascript"></script>
+    <script src="/Public/adminlte/dist/js/demo.js" type="text/javascript"></script>
     <!-- Different Button -->
     <script type="text/javascript">
     	function store() {

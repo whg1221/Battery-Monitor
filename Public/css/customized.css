@@ -151,13 +151,17 @@
     background-size: contain;
 }
 
-.battery-cell p
+.battery-cell a
 {
     font-size: 3em;
 
-    padding-top: 40%;
+    padding-top: 28%;
+
+    display: block;
 
     text-align: center;
+
+    color: #fff;
 }
 
 .nav-tabs

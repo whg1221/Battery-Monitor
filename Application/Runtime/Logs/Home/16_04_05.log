@@ -1,0 +1,223 @@
+[ 2016-04-05T10:21:45+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.046897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.047385s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.1025s ]
+SQL: SELECT `userid`,`loginnum` FROM `whg_users` WHERE `userid` = 5 LIMIT 1   [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `whg_his_batty` [ RunTime:0.0587s ]
+SQL: SELECT `syspressure`,`soc`,`battery`,`range`,`tempmax`,`tempmin`,`voltagemax`,`voltagemin`,`faultevent`,`faulttime`,`recordtime` FROM `whg_his_batty` WHERE `userid` = 5  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000521s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000962s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.337494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.337987s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.023680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.024120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.164295s ]
+INFO: [ app_end ] --END-- [ RunTime:0.164874s ]
+
+[ 2016-04-05T10:22:21+08:00 ] ::1 /index.php/Home/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002116s ]
+
+[ 2016-04-05T10:22:24+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000400s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000868s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.101682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003794s ]
+
+[ 2016-04-05T10:22:28+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002310s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.0332s ]
+NOTIC: [8] Undefined index: validate C:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto C:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT `userid`,`username`,`password`,`lastdate`,`lastip` FROM `whg_users` WHERE `username` = 'whg1221' LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000700s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073276s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001630s ]
+
+[ 2016-04-05T10:22:31+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001180s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001640s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000413s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000847s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029078s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001766s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004803s ]
+
+[ 2016-04-05T10:22:41+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000094s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001710s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.0394s ]
+NOTIC: [8] Undefined index: validate C:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto C:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT `userid`,`username`,`password`,`lastdate`,`lastip` FROM `whg_users` WHERE `username` = 'test' LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.0102s ]
+SQL: UPDATE `whg_users` SET `loginnum`=loginnum+1 WHERE `username` = 'test' AND `userid` = 6 [ RunTime:0.0053s ]
+SQL: UPDATE `whg_users` SET `username`='test',`password`='e10adc3949ba59abbe56e057f20f883e',`lastdate`='1459822961',`lastip`='0.0.0.0' WHERE `username` = 'test' AND `userid` = 6 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000850s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001347s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020446s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001985s ]
+
+[ 2016-04-05T10:22:43+08:00 ] ::1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001151s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001536s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.0552s ]
+SQL: SELECT `userid`,`loginnum` FROM `whg_users` WHERE `userid` = 6 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `whg_his_batty` [ RunTime:0.0163s ]
+SQL: SELECT `syspressure`,`soc`,`battery`,`range`,`tempmax`,`tempmin`,`voltagemax`,`voltagemin`,`faultevent`,`faulttime`,`recordtime` FROM `whg_his_batty` WHERE `userid` = 6  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000544s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000954s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.116134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001465s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002041s ]
+
+[ 2016-04-05T10:22:54+08:00 ] ::1 /index.php/Home/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003303s ]
+
+[ 2016-04-05T10:22:55+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000096s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001629s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001985s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000331s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040783s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001394s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001900s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002143s ]
+
+[ 2016-04-05T10:48:22+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.021107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.023990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024370s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.0313s ]
+NOTIC: [8] Undefined index: validate C:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto C:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT `userid`,`username`,`password`,`lastdate`,`lastip` FROM `whg_users` WHERE `username` = 'test' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.0111s ]
+SQL: UPDATE `whg_users` SET `loginnum`=loginnum+1 WHERE `username` = 'test' AND `userid` = 6 [ RunTime:0.0010s ]
+SQL: UPDATE `whg_users` SET `username`='test',`password`='e10adc3949ba59abbe56e057f20f883e',`lastdate`='1459824502',`lastip`='0.0.0.0' WHERE `username` = 'test' AND `userid` = 6 [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000513s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.199073s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.199456s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.016264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016846s ]
+
+[ 2016-04-05T10:48:25+08:00 ] ::1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000094s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002535s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.0425s ]
+SQL: SELECT `userid`,`loginnum` FROM `whg_users` WHERE `userid` = 6 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `whg_his_batty` [ RunTime:0.0220s ]
+SQL: SELECT `syspressure`,`soc`,`battery`,`range`,`tempmax`,`tempmin`,`voltagemax`,`voltagemin`,`faultevent`,`faulttime`,`recordtime` FROM `whg_his_batty` WHERE `userid` = 6  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000467s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000813s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.092670s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000915s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010901s ]
+

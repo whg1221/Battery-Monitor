@@ -1,0 +1,290 @@
+[ 2016-03-20T13:17:31+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.046600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.037406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037805s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000438s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.291507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.291876s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011836s ]
+
+[ 2016-03-20T13:17:35+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002213s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000254s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000674s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.089509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.090466s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016925s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017201s ]
+
+[ 2016-03-20T13:17:43+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000191s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002198s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'whg'@'localhost' (using password: YES)
+
+[ 2016-03-20T13:18:06+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000094s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002476s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'whg'@'localhost' (using password: YES)
+
+[ 2016-03-20T13:23:52+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000108s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002458s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000473s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001524s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025936s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001844s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002232s ]
+
+[ 2016-03-20T13:23:57+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002682s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000293s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000798s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030463s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001848s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004170s ]
+
+[ 2016-03-20T13:24:16+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002378s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'whg'@'localhost' (using password: YES)
+
+[ 2016-03-20T13:27:29+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000096s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007398s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'whg1221'@'localhost' (using password: YES)
+
+[ 2016-03-20T13:40:16+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007132s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000614s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045095s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001906s ]
+
+[ 2016-03-20T13:40:21+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003409s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000483s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001587s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001949s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002314s ]
+
+[ 2016-03-20T13:40:47+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000088s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001683s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002645s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'whg1221'@'localhost' (using password: YES)
+
+[ 2016-03-20T13:47:08+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002642s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000627s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032316s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032686s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001004s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001290s ]
+
+[ 2016-03-20T13:47:12+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000088s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003351s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002408s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002880s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035188s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002395s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002357s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002631s ]
+
+[ 2016-03-20T13:47:20+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000158s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002405s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'whg1221'@'localhost' (using password: YES)
+
+[ 2016-03-20T14:11:39+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033947s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.041822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042536s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000254s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000651s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.395342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.395783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.033852s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.034270s ]
+
+[ 2016-03-20T14:11:44+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002183s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000414s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000887s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040882s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041396s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001583s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.028609s ]
+INFO: [ app_end ] --END-- [ RunTime:0.029000s ]
+
+[ 2016-03-20T14:12:01+08:00 ] ::1 /index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000145s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015718s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.0589s ]
+NOTIC: [8] Undefined index: validate C:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto C:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT `userid`,`username`,`password`,`lastdate`,`lastip` FROM `whg_users` WHERE `username` = 'test' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.0586s ]
+SQL: UPDATE `whg_users` SET `loginnum`=loginnum+1 WHERE `username` = 'test' AND `userid` = 6 [ RunTime:0.0023s ]
+SQL: UPDATE `whg_users` SET `username`='test',`password`='e10adc3949ba59abbe56e057f20f883e',`lastdate`='1458454321',`lastip`='0.0.0.0' WHERE `username` = 'test' AND `userid` = 6 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000459s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001472s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045486s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003968s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004351s ]
+
+[ 2016-03-20T14:12:05+08:00 ] ::1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007837s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.0614s ]
+SQL: SELECT `userid`,`loginnum` FROM `whg_users` WHERE `userid` = 6 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `whg_his_batty` [ RunTime:0.0537s ]
+SQL: SELECT `syspressure`,`soc`,`battery`,`range`,`tempmax`,`tempmin`,`voltagemax`,`voltagemin`,`faultevent`,`faulttime`,`recordtime` FROM `whg_his_batty` WHERE `userid` = 6  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004494s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.009391s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.278991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.279376s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001947s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002361s ]
+
