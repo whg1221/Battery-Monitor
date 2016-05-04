@@ -27,6 +27,8 @@
 <![endif]-->
     <!-- Customized CSS Style -->
     <link href="/Public/css/customized.css" rel="stylesheet" type="text/css" />
+    <!-- ECharts -->
+    <script src="/Public/adminlte/dist/js/echarts.min.js" type="text/javascript"></script>
 </head>
 <!-- ADD THE CLASS sidedar-collapse TO HIDE THE SIDEBAR PRIOR TO LOADING THE SITE -->
 
@@ -78,6 +80,160 @@
         <div class="battery-detail"><span>MaxTemp</span>&nbsp;&nbsp;<span id="battery-detail-34">12.5</span><span>&#8451;</span></div>
         <div class="battery-detail"><span>MinTemp</span>&nbsp;&nbsp;<span id="battery-detail-35">12.5</span><span>&#8451;</span></div>
         <!-- battery-cell end -->
+        <div class="row" style="margin-bottom:50px;background: #fff;">
+                    <div class="col-md-6" id="chart1" style="height:400px;width:650px;">
+                        <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('chart1'));
+
+                        // 指定图表的配置项和数据
+                        var option = {
+                            title: {
+                                text: 'Battery Temp',
+                                subtext: 'Test Data'
+                            },
+                            tooltip: {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                data:['MaxTemp','MinTemp']
+                            },
+                            toolbox: {
+                                show: true,
+                                feature: {
+                                    dataZoom: {},
+                                    dataView: {readOnly: false},
+                                    magicType: {type: ['line', 'bar']},
+                                    restore: {},
+                                    saveAsImage: {}
+                                }
+                            },
+                            xAxis:  {
+                                type: 'category',
+                                boundaryGap: false,
+                                data: ['周一','周二','周三','周四','周五','周六','周日']
+                            },
+                            yAxis: {
+                                type: 'value',
+                                axisLabel: {
+                                    formatter: '{value} °C'
+                                }
+                            },
+                            series: [
+                                {
+                                    name:'MaxTemp',
+                                    type:'line',
+                                    data:[11, 11, 15, 13, 12, 13, 10],
+                                    markPoint: {
+                                        data: [
+                                            {type: 'max', name: '最大值'},
+                                            {type: 'min', name: '最小值'}
+                                        ]
+                                    },
+                                    markLine: {
+                                        data: [
+                                            {type: 'average', name: '平均值'}
+                                        ]
+                                    }
+                                },
+                                {
+                                    name:'MinTemp',
+                                    type:'line',
+                                    data:[1, -2, 2, 5, 3, 2, 0],
+                                    markPoint: {
+                                        data: [
+                                            {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+                                        ]
+                                    },
+                                    markLine: {
+                                        data: [
+                                            {type: 'average', name: '平均值'}
+                                        ]
+                                    }
+                                }
+                            ]
+                        };
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                        </script>
+                    </div>
+                    <div class="col-md-6" id="chart2" style="height:400px;width:650px;">
+                        <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('chart2'));
+
+                        // 指定图表的配置项和数据
+                        var option = {
+                            title: {
+                                text: 'Battery Voltage',
+                                subtext: 'Test Data'
+                            },
+                            tooltip: {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                data:['VoltageMax','VoltageMin']
+                            },
+                            toolbox: {
+                                show: true,
+                                feature: {
+                                    dataZoom: {},
+                                    dataView: {readOnly: false},
+                                    magicType: {type: ['line', 'bar']},
+                                    restore: {},
+                                    saveAsImage: {}
+                                }
+                            },
+                            xAxis:  {
+                                type: 'category',
+                                boundaryGap: false,
+                                data: ['周一','周二','周三','周四','周五','周六','周日']
+                            },
+                            yAxis: {
+                                type: 'value',
+                                axisLabel: {
+                                    formatter: '{value} V'
+                                }
+                            },
+                            series: [
+                                {
+                                    name:'VoltageMax',
+                                    type:'line',
+                                    data:[11, 11, 15, 13, 12, 13, 10],
+                                    markPoint: {
+                                        data: [
+                                            {type: 'max', name: '最大值'},
+                                            {type: 'min', name: '最小值'}
+                                        ]
+                                    },
+                                    markLine: {
+                                        data: [
+                                            {type: 'average', name: '平均值'}
+                                        ]
+                                    }
+                                },
+                                {
+                                    name:'VoltageMin',
+                                    type:'line',
+                                    data:[1, -2, 2, 5, 3, 2, 0],
+                                    markPoint: {
+                                        data: [
+                                            {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+                                        ]
+                                    },
+                                    markLine: {
+                                        data: [
+                                            {type: 'average', name: '平均值'}
+                                        ]
+                                    }
+                                }
+                            ]
+                        };
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                        </script>
+                    </div>
+                </div>
     </div>
     <!-- ./wrapper -->
     <!-- jQuery 2.1.4 -->

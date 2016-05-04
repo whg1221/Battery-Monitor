@@ -1,0 +1,64 @@
+[ 2016-05-04T21:57:40+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000128s ]
+INFO: [ app_init ] --END-- [ RunTime:0.024343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.029092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029615s ]
+SQL: SHOW COLUMNS FROM `whg_users` [ RunTime:0.0844s ]
+SQL: SELECT `userid`,`loginnum` FROM `whg_users` WHERE `userid` = 6 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `whg_his_batty` [ RunTime:0.0634s ]
+SQL: SELECT `syspressure`,`soc`,`battery`,`range`,`tempmax`,`tempmin`,`voltagemax`,`voltagemin`,`faultevent`,`faulttime`,`recordtime` FROM `whg_his_batty` WHERE `userid` = 6  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000570s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.412754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.413262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.016450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016893s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.126331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.131717s ]
+
+[ 2016-05-04T22:00:38+08:00 ] ::1 /index.php/Home/Index/battery_detail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002081s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000424s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000937s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067317s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001463s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001587s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002081s ]
+
+[ 2016-05-04T22:01:43+08:00 ] ::1 /index.php/Home/Index/battery_detail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004203s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000435s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000875s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011797s ]
+
