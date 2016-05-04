@@ -266,7 +266,7 @@
                 </div>
                 <!-- battery-header end -->
                 <!-- battery-cell -->
-                <div class="battery-cell"><a href="battery_detail.html">1</a></div>
+                <div class="battery-cell"><a href="<?php echo U('index/battery_detail');?>">1</a></div>
                 <!-- append here!!! -->
                 
                 
